@@ -1,6 +1,18 @@
 import readlinesync = require("readline-sync");
 import { ProdutoController } from "./src/controller/ProdutoController";
 import { colors } from "./src/util/Colors";
+import { Cerveja } from "./src/model/Cerveja";
+import { ProdutoRepository } from "./src/repository/ProdutoRepository";
+
+const repo = new ProdutoRepository();
+
+repo.adicionar(new Cerveja(1, "IPA", "Ale"));
+repo.adicionar(new Cerveja(2, "Pilsen", "Lager"));
+repo.remover(1);
+
+
+
+
 
 export function main() {
   const produtoController = new ProdutoController();

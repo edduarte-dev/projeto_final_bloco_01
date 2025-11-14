@@ -1,4 +1,4 @@
-// src/controller/ProdutoController.ts
+import { Cerveja } from "../model/Cerveja";
 import { Produto } from "../model/Produto";
 
 export class ProdutoController {
@@ -8,11 +8,11 @@ export class ProdutoController {
   
   constructor() {
     this.produtos = [
-      { id: this.proximoId++, nome: "IPA" },
-      { id: this.proximoId++, nome: "Pilsen" },
-      { id: this.proximoId++, nome: "Stout" },
-      { id: this.proximoId++, nome: "Weiss" },
-      { id: this.proximoId++, nome: "Helles" }
+    new Cerveja(this.proximoId++, 'IPA', 'Ale'),
+    new Cerveja(this.proximoId++, 'Pilsen', 'Lager'),
+    new Cerveja(this.proximoId++, 'Stout', 'Ale'),
+    new Cerveja(this.proximoId++, 'Weiss', 'Trigo'),
+    new Cerveja(this.proximoId++, 'Helles', 'Lager')
     ];
   }
 
